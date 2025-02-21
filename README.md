@@ -1,9 +1,6 @@
 # Configuration-Management-Dashboard
 
 
-Sure! Here's a well-structured **`README.md`** file for your repository. This will provide clear documentation of your **Configuration Management Dashboard** project.
-
----
 
 ## 🛠️ Configuration Management Dashboard  
 **Automating Configuration Across Environments with Ansible**  
@@ -156,4 +153,3 @@ If you find this project useful, **please give it a star ⭐ on GitHub!** 😊
 
 ---
 
-This **README.md** covers everything needed for your GitHub repository. Let me know if you want any modifications! 🚀
