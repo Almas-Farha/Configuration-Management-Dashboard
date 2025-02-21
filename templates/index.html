@@ -1,0 +1,13 @@
+<body>
+    <h1>Configuration Management Dashboard</h1>
+    <p>Manage and automate your configurations efficiently!</p>
+
+    <a href="{{ url_for('main.add_configuration') }}">Add New Configuration</a>
+
+    <h2>Configurations List</h2>
+    <ul>
+        {% for config in configurations %}
+        <li>{{ config.name }} - {{ config.status }} ({{ config.description }})</li>
+        {% endfor %}
+    </ul>
+</body>

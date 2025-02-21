@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: config-dashboard
+  labels:
+    app: config-dashboard
+spec:
+  replicas: 2  # Adjust based on load
+  selector:
+    matchLabels:
+      app: config-dashboard
+  template:
+    metadata:
+      labels:
+        app: config-dashboard
+    spec:
+      containers:
+      - name: config-dashboard
+        image: <REGION>.icr.io/<NAMESPACE>/config-dashboard:latest  # Replace with your IBM Cloud Container Registry image
+        ports:
+        - containerPort: 5000  # Flask default port
+        env:
+        - name: FLASK_ENV
+          value: "production"
+        - name: DATABASE_URL
+          value: "sqlite:///app.db"  # Modify if using a different database

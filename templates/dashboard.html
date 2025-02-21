@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Configuration Management Dashboard</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <h2>Configuration Management Dashboard</h2>
+    <button id="runPlaybook">Run Ansible Playbook</button>
+    <div id="output"></div>
+
+    <script>
+        document.getElementById("runPlaybook").onclick = function() {
+            fetch('/execute_playbook', { method: 'POST' })
+            .then(response => response.json())
+            .then(data => document.getElementById("output").innerText = data.output);
+        };
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: config-dashboard-service
+spec:
+  selector:
+    app: config-dashboard
+  ports:
+    - protocol: TCP
+      port: 80       # External port
+      targetPort: 5000  # Flask app internal port
+  type: ClusterIP  # Change to LoadBalancer if needed
